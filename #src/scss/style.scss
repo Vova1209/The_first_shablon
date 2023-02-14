@@ -1,0 +1,105 @@
+body{  
+    font-family: Montserrat;
+   background-color: #181818;
+}
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+   min-height: 100%;
+   justify-content: center;
+   align-items: center;
+   
+   
+}
+.hello-body {
+   box-shadow: 16px 14px 20px #0000008c;
+   color: #fff;
+   position: relative;
+  border: 3px solid #5E5372;
+   top: 50px;
+   right: 0;
+   text-align: center;
+   animation-duration: 3s;
+   animation-name: hello;
+   animation-iteration-count: infinite;
+   animation-iteration-count: 1;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.hello-body::before{
+   content: '';
+   
+   background-image: conic-gradient(
+       #ff0052 20deg,
+       transparent 120deg
+   );
+   width: 150%;
+   height: 150%;
+   position: absolute;
+   animation: rotate 2s linear infinite; 
+}
+
+.hello-body::after{
+   content: 'Вітаю)). Ти змусив цей додаток працювати, ти молодець.';
+   width: 787px;
+   height: 200px;
+   background: #101010;
+   position: absolute;
+   border-radius: 10px;
+   color: #ff0052 ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: larger;
+   letter-spacing: 5px;
+   box-shadow: inset 20px 20px 20px #0000008c;
+   font-weight: 700;
+}
+
+
+@keyframes hello {
+
+   from{
+       
+       right: 120%;
+       
+
+   }
+to{ 
+   right: 0;
+
+}
+
+}
+@keyframes rotate {
+
+   0%{
+       transform: rotate(0deg);
+   }
+   100%{
+       transform: rotate(-360deg);
+   }
+}
+
+
+.hello-body__padding{
+padding: 40px;
+}
+.hello-body__icon {
+}
+.hello-body__title {
+
+   font-size: 20px;
+   margin: 0px 0px 24px 0px;
+   font-weight: 700;
+
+}
+.hello-body__text {
+   margin: 0 auto;
+   max-width: 35%;
+}
+
